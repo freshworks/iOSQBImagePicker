@@ -296,6 +296,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
             break;
     }
     
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:options];
     PHImageManager *imageManager = [PHImageManager defaultManager];
     
